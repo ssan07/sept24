@@ -256,52 +256,84 @@
 //     default:
 //         console.log("It's a regular day.");
 // }
-let x=prompt("Enter a number:");
-let y=prompt("Enter a number:");
-let a=Number(x);
-let b=Number(y);
-let o=prompt("Enter a oprator:");
-let z=prompt("Enter a Day:");
-switch(o)
-{
-    case "+":
-        console.log(a+b);
-    break;
-    case "-":
-        console.log(a-b);
-    break;
-    case "*":
-        console.log(a*b);
-    break;
-    case "/":
-        console.log(a/b);
-    break;
-    default:
-        console.log("Error");
-}
-switch(z)
-{
-    case "1":
-        console.log("Monday");
-    break;
-    case "2":
-        console.log("Tuesday");
-    break;
-    case "3":
-        console.log("Wednesday");
-    break;
-    case "4":
-        console.log("Thursday");
-    break;
-    case "5":
-        console.log("Friday");
-    break;
-    case "6":
-        console.log("Saturday");
-    break;
-    case "7":
-        console.log("Sunday");
-    break;
-    default:
-        console.log("Day not found error");
+// let x=prompt("Enter a number:");
+// let y=prompt("Enter a number:");
+// let a=Number(x);
+// let b=Number(y);
+// let o=prompt("Enter a oprator:");
+// let z=prompt("Enter a Day:");
+// switch(o)
+// {
+    // case "+":
+        // console.log(a+b);
+    // break;
+    // case "-":
+        // console.log(a-b);
+    // break;
+    // case "*":
+        // console.log(a*b);
+    // break;
+    // case "/":
+        // console.log(a/b);
+    // break;
+    // default:
+        // console.log("Error");
+// }
+// switch(z)
+// {
+    // case "1":
+        // console.log("Monday");
+    // break;
+    // case "2":
+        // console.log("Tuesday");
+    // break;
+    // case "3":
+        // console.log("Wednesday");
+    // break;
+    // case "4":
+        // console.log("Thursday");
+    // break;
+    // case "5":
+        // console.log("Friday");
+    // break;
+    // case "6":
+        // console.log("Saturday");
+    // break;
+    // case "7":
+        // console.log("Sunday");
+    // break;
+    // default:
+        // console.log("Day not found error");
+// }
+
+// setTimeout(function(){
+//     console.log("3 seconds later");
+// },3000);
+// setTimeout(function(){
+//     console.log("10 seconds later");
+// },10000);
+// setTimeout(function(){
+//     console.log("30 seconds later");
+// },30000);
+// setTimeout(function(){
+//     console.log("1 minute later");
+// },60000);
+
+
+// switch (new Date().getDay()) {      // input is current day
+// case 6:                         // if (day == 6)
+// 	text = "Saturday";          
+// 	break;
+// case 0:                         // if (day == 0)
+// 	text = "Sunday";
+// 	break;
+// default:                        // else...
+// 	text = "Whatever";
+// } 
+
+let a=confirm("do you want to log in?");
+if(a===true){
+    alert("You are logged in");
+}else{
+    alert("login failed");
 }

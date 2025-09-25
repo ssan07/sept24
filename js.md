@@ -180,3 +180,6 @@ console.log(y);
 ## comma operators
 
 ## relational operators
+
+dom-document object model
+api-application programming interface
