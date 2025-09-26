@@ -331,9 +331,25 @@
 // 	text = "Whatever";
 // } 
 
-let a=confirm("do you want to log in?");
-if(a===true){
-    alert("You are logged in");
-}else{
-    alert("login failed");
-}
+// let a=confirm("do you want to log in?");
+// if(a===true){
+//     alert("You are logged in");
+// }else{
+//     alert("login failed");
+// }
+
+var str="Hello World!";
+var atr="yello World!";
+var len =str.length;
+console.log(len);
+console.log(str.lastIndexOf("el"));
+console.log(str.indexOf("el"));
+console.log(str.slice(2,5));
+console.log(str.replace("wor","abc"));
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.concat("hi!",atr));
+console.log(str.charAt(6));
+console.log(str.split(","));
+
+
