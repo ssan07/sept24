@@ -338,18 +338,35 @@
 //     alert("login failed");
 // }
 
-var str="Hello World!";
-var atr="yello World!";
-var len =str.length;
-console.log(len);
-console.log(str.lastIndexOf("el"));
-console.log(str.indexOf("el"));
-console.log(str.slice(2,5));
-console.log(str.replace("wor","abc"));
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str.concat("hi!",atr));
-console.log(str.charAt(6));
-console.log(str.split(","));
+// var str="Hello World!";
+// var atr="yello,World!";
+// var len =str.length;
+// console.log(len);
+// console.log(str.lastIndexOf("el"));
+// console.log(str.indexOf("el"));
+// console.log(str.slice(2,5));
+// console.log(str.replace("wor","abc"));
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// console.log(str.concat("hi!",atr));
+// console.log(str.charAt(6));
+// console.log(atr.split(","));
 
 
+var a=54.7587886;
+
+// console.log(a.toFixed(1));
+// console.log(Number(new Date));
+// console.log(Number.MAX_VALUE);
+// console.log(Number.MIN_VALUE);
+
+// var a=54.7587886;
+// var c=-54.7587886;
+// console.log(Math.round(a));
+// console.log(Math.pow(2,5));
+// console.log(Math.sqrt(64));
+// console.log(Math.abs(c));
+// console.log(Math.ceil(a));
+// console.log(Math.floor(a));
+// console.log(Math.min(0,3,-1,-3));
+// console.log(Math.random());
