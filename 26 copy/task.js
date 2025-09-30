@@ -3,10 +3,10 @@ let x2 = Number(prompt("which of the following is the letter h \n 1.a , 2.s , 3.
 let x3 = Number(prompt("which of the following is the letter h \n 1.a , 2.s , 3.h , 4.c"));
 let x4 = Number(prompt("which of the following is the letter h \n 1.a , 2.s , 3.h , 4.c"));
 
-let y1 = 1;
-let y2 = 1;
-let y3 = 1;
-let y4 = 1;
+let y1 = 3;
+let y2 = 3;
+let y3 = 3;
+let y4 = 3;
 
 let score = 0;
 for (var i = 0; i < 4; i++) {

@@ -353,7 +353,7 @@
 // console.log(atr.split(","));
 
 
-var a=54.7587886;
+// var a=54.7587886;
 
 // console.log(a.toFixed(1));
 // console.log(Number(new Date));
@@ -370,3 +370,127 @@ var a=54.7587886;
 // console.log(Math.floor(a));
 // console.log(Math.min(0,3,-1,-3));
 // console.log(Math.random());
+
+
+// try {
+// undefinedFunction();
+// }
+// catch(err) {
+// console.log(err.message);
+// }
+
+// const mypromise = new Promise((resolve,reject)=>{
+//     let success=true;
+//     if(success){
+//         resolve("task completed successfully");
+//     }else{
+//         reject("something went wromg!");
+//     }
+// });
+
+// mypromise
+//     .then((message)=>{
+//         console.log(message);
+//     })
+//     .catch((error)=>{
+//         console.error(error);
+//     })
+//     .finally(()=>{
+//         console.log("promise execution finished");
+//     });
+    
+// const myPromise = new Promise((resolve,reject)=>{
+//     let success=false;
+//     if(success){
+//         resolve("task completed successfully");
+//     }else{
+//         reject("something went wromg!");
+//     }
+// });
+
+// myPromise
+//     .then((message)=>{
+//         console.log(message);
+//     })
+//     .catch((error)=>{
+//         console.error(error);
+//     })
+//     .finally(()=>{
+//         console.log("promise execution finished");
+//     });
+
+// const p1=new Promise((resolve)=>{
+//     resolve("task completed successfully");
+// });
+
+// p1.then((msg)=>{
+//     console.log(msg);
+// });
+
+
+// const p2=new Promise((_, reject)=>{
+//     reject("something went wromg!");
+// });
+
+// p2.catch((err)=>{
+//     console.error(err);
+// });
+
+
+// const p3=new Promise((resolve)=>{
+//     setTimeout(()=>{
+//         resolve("task completed successfully after 2s");
+//     },5000);
+// });
+
+// p3.then((msg)=>{
+//     console.log(msg);
+// });
+
+// function checknumber(num){
+//     return new Promise((resolve,reject)=>{
+//         if(num%2==0){
+//             resolve(`${num} is even`);
+//         }else{
+//             reject(`${num} is odd`);
+//         }
+//     });
+// }
+
+// checknumber(4)
+//     .then(console.log)
+//     .catch(console.error);
+
+// checknumber(7)
+//     .then(console.log)
+//     .catch(console.error);
+
+
+// new Promise((resolve)=>{
+//     resolve(10);
+// })
+//     .then((num)=>{
+//         console.log("1" ,num);
+//         return num*2;
+//     })
+//     .then((num)=>{
+//         console.log("2" ,num);
+//         return num+5;
+//     })
+//     .then((num)=>{
+//         console.log("3" ,num);
+//     });
+
+// const a=Promise.resolve("apple");
+// const b=Promise.resolve("banana");
+// const c=Promise.resolve("grapes");
+
+// Promise.all([a,b,c]).then((fruits)=>{
+//     console.log("fruits:",fruits);
+// });
+
+// const fast=new Promise((resolve)=>setTimeout(()=>resolve("fast!"),2000));
+// const slow=new Promise((resolve)=>setTimeout(()=>resolve("slow"),3000));
+// Promise.race([fast,slow]).then((winner)=>{
+//     console.log("winner:",winner);
+// });

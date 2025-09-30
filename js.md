@@ -183,3 +183,48 @@ console.log(y);
 
 dom-document object model
 api-application programming interface
+
+# promise
+
+// const mypromise = new Promise((resolve,reject)=>{
+//     let success=true;
+//     if(success){
+//         resolve("task completed successfully");
+//     }else{
+//         reject("something went wromg!");
+//     }
+// });
+
+// mypromise
+//     .then((message)=>{
+//         console.log(message);
+//     })
+//     .catch((error)=>{
+//         console.error(error);
+//     })
+//     .finally(()=>{
+//         console.log("promise execution finished");
+//     });
+    
+// const myPromise = new Promise((resolve,reject)=>{
+//     let success=false;
+//     if(success){
+//         resolve("task completed successfully");
+//     }else{
+//         reject("something went wromg!");
+//     }
+// });
+
+// myPromise
+//     .then((message)=>{
+//         console.log(message);
+//     })
+//     .catch((error)=>{
+//         console.error(error);
+//     })
+//     .finally(()=>{
+//         console.log("promise execution finished");
+//     });
+
+
+
