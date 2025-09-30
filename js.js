@@ -264,46 +264,46 @@
 // let z=prompt("Enter a Day:");
 // switch(o)
 // {
-    // case "+":
-        // console.log(a+b);
-    // break;
-    // case "-":
-        // console.log(a-b);
-    // break;
-    // case "*":
-        // console.log(a*b);
-    // break;
-    // case "/":
-        // console.log(a/b);
-    // break;
-    // default:
-        // console.log("Error");
+// case "+":
+// console.log(a+b);
+// break;
+// case "-":
+// console.log(a-b);
+// break;
+// case "*":
+// console.log(a*b);
+// break;
+// case "/":
+// console.log(a/b);
+// break;
+// default:
+// console.log("Error");
 // }
 // switch(z)
 // {
-    // case "1":
-        // console.log("Monday");
-    // break;
-    // case "2":
-        // console.log("Tuesday");
-    // break;
-    // case "3":
-        // console.log("Wednesday");
-    // break;
-    // case "4":
-        // console.log("Thursday");
-    // break;
-    // case "5":
-        // console.log("Friday");
-    // break;
-    // case "6":
-        // console.log("Saturday");
-    // break;
-    // case "7":
-        // console.log("Sunday");
-    // break;
-    // default:
-        // console.log("Day not found error");
+// case "1":
+// console.log("Monday");
+// break;
+// case "2":
+// console.log("Tuesday");
+// break;
+// case "3":
+// console.log("Wednesday");
+// break;
+// case "4":
+// console.log("Thursday");
+// break;
+// case "5":
+// console.log("Friday");
+// break;
+// case "6":
+// console.log("Saturday");
+// break;
+// case "7":
+// console.log("Sunday");
+// break;
+// default:
+// console.log("Day not found error");
 // }
 
 // setTimeout(function(){
@@ -398,7 +398,7 @@
 //     .finally(()=>{
 //         console.log("promise execution finished");
 //     });
-    
+
 // const myPromise = new Promise((resolve,reject)=>{
 //     let success=false;
 //     if(success){
@@ -494,3 +494,49 @@
 // Promise.race([fast,slow]).then((winner)=>{
 //     console.log("winner:",winner);
 // });
+
+// let i = 1;
+// let s=0
+// while (i <= 20) {
+
+//         // console.log(i);
+//         s += i;
+//     i++;
+// }
+// console.log(s);
+
+// let i = 2;
+// while (i <= 10) {
+//     if (i % 2 != 0) {
+//         console.log(i);
+//     }
+//     i++;
+// }
+
+
+    // let pwd="user@123";
+    // let input;
+    // do{
+    //     input=prompt("Enter password");
+    //     if(input!== pwd){
+    //         alert("Enter the right password");
+    //     }
+    // }while(input !== pwd);
+    // alert("yeah!!! you are logged in!");
+
+var fruits=["apple","orange","banana","grapes","mango"];
+
+console.log(fruits[1]);
+for(var i=0;i<fruits.length;i++){
+    console.log(fruits[i]);
+}
+// console.log(fruits.tostring());
+console.log(fruits.join (" * "));
+fruits.pop();
+console.log(fruits);
+fruits.push("orange");
+console.log(fruits);
+fruits.shift();
+console.log(fruits);
+fruits.unshift("orange");
+console.log(fruits);

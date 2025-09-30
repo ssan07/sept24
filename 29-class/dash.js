@@ -50,6 +50,21 @@ var l={'namez':name,'age':dob,'cityz':city};
 var store=JSON.stringify(l);
 localStorage.setItem("storage", store);
 }
+
+
+const quotes = [
+      "The best way to get started is to quit talking and begin doing.",
+      "Don’t let yesterday take up too much of today.",
+      "It’s not whether you get knocked down, it’s whether you get up.",
+      "If you are working on something exciting, it will keep you motivated.",
+      "Success is not in what you have, but who you are.",
+      "Your time is limited, so don’t waste it living someone else’s life."
+    ];
+
+
+      let nx = Math.floor(Math.random() * quotes.length);
+      document.getElementById("q").textContent = quotes[nx];
+    
 /*
 let t = localStorage.getItem("storage");
 if (t) {
