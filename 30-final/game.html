@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./game.css">
+</head>
+
+<body>
+    <!-- <section> -->
+    <section class="active">
+        <div class="box">
+            <form id="form">
+
+                <label>Register:</label> <br><br>
+                <label>Enter your name:</label> <br>
+                <input class="field" id="name" type="text" placeholder="Ram" required><br><br>
+                <label>Enter your email:</label> <br>
+                <input class="field" id="email" type="email" placeholder="ram@unknown.com" required><br><br>
+                <label>Enter your age:</label> <br>
+                <input class="field" id="age" type="number" placeholder="19" required><br><br>
+                <button class="submi" onclick="reg()">Register</button>
+                <div id="exp" style="font-size: 20px;text-align: left;"></div>
+            </form>
+        </div>
+    </section>
+    <br><br>
+
+    <section id="quiz">
+
+    </section>
+
+    <section id="loading">
+        <!-- <section id="loading" class="active"> -->
+        loading<br><br>
+        <div class="cover">
+            <div class="bar"></div>
+        </div>
+    </section>
+
+    <section id="end">
+        <!-- <section id="end" class="active"> -->
+        You have answered all the questions<br>
+        <button class="buttonload" onclick="loadbutton()">View Scores</button>
+    </section>
+
+    <section id="result" style="text-align: left;">
+        <!-- <section id="result" class="active"> -->
+            <span style="text-align: center;">Results</span><br>
+        ✅ Score: <span id="r1"></span>/3<br>
+        📊 Percentage: <span id="r2"></span>%<br>
+        🎯 Grade: <span id="r3"></span><br>
+        🕒 Time: <span id="r4"></span><br><br>
+        JSON:<span id="r5"></span><br>
+    </section>
+
+
+
+
+    <!-- <div class="page"> -->
+    <section class="quizs" id="quiz1">
+        <form>
+            <div class="num" id="no1"></div><br>
+            <div class="qn">Which gas do plants inhale?</div>
+            <button id="b1" class="opt">Oxygen</button>
+            <button id="b2" class="opt">Nitrogen</button><br>
+            <button id="b3" class="opt ca">Carbon Dioxide</button>
+            <button id="b4" class="opt">Hydrogen</button>
+        </form><br>
+    </section>
+    <section class="quizs" id="quiz2">
+        <form>
+            <div class="num" id="no2"></div><br>
+            <div class="qn">Which planet is known as the Red Planet?</div>
+            <button id="b5" class="opt">Earth</button>
+            <button id="b6" class="opt ca">Mars</button><br>
+            <button id="b7" class="opt">Jupiter</button>
+            <button id="b8" class="opt">Saturn</button>
+        </form><br>
+    </section>
+    <section class="quizs" id="quiz3">
+        <form>
+            <div class="num" id="no3"></div><br>
+            <div class="qn">Who is the father of Computers?</div>
+            <button id="b9" class="opt ca">Charles Babbage</button>
+            <button id="b10" class="opt">Newton</button><br>
+            <button id="b11" class="opt">Einstein</button>
+            <button id="b12" class="opt">Turing</button>
+        </form><br>
+    </section>
+    <section class="quizs" id="quiz4">
+        <form>
+            <div class="num" id="no4"></div><br>
+            <div class="qn">What is 5 + 7?</div>
+            <button id="b13" class="opt">10</button>
+            <button id="b14" class="opt">11</button><br>
+            <button id="b15" class="opt ca">12</button>
+            <button id="b16" class="opt">13</button>
+        </form><br>
+    </section>
+    <section class="quizs" id="quiz5">
+        <form>
+            <div class="num" id="no5"></div><br>
+            <div class="qn">Which is the largest ocean?</div>
+            <button id="b17" class="opt">Atlantic</button>
+            <button id="b18" class="opt">Indian</button><br>
+            <button id="b19" class="opt ca">Pacific</button>
+            <button id="b20" class="opt">Arctic</button>
+        </form><br>
+    </section>
+    <!-- </div> -->
+
+
+
+    <script src="./game.js"></script>
+</body>
+
+</html>

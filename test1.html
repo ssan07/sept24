@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Virtual Event Registration & Score Tracker</title>
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    } 
+    section {
+      display: none;
+       background: white;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    }
+    section.active { display: block; }
+    input, button, select {
+       margin: 8px 0;
+      padding: 8px;
+      width: 90%;
+      max-width: 400px; 
+      display: block;
+    }
+     button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    } 
+     button:hover { background: #0096c7; }
+    .output {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    } 
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎓 Virtual Event Registration & Score Tracker</h1>
+  </header>
+
+  <!-- Registration Section -->
+  <section id="registration" class="active">
+    <h2>Register</h2>
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="number" id="age" placeholder="Enter Age">
+    <button onclick="register()">Register</button>
+    <div class="output" id="regOutput"></div>
+  </section>
+
+  <!-- Quiz Section -->
+  <section id="quiz">
+    <h2>Mini Quiz</h2>
+    <form id="quizForm"></form>
+    <button onclick="submitQuiz()">Submit Answers</button>
+    <div class="output" id="quizOutput"></div>
+  </section>
+
+  <!-- Result Section -->
+  <section id="result">
+    <h2>Result</h2>
+    <div class="output" id="resultOutput"></div>
+    <pre id="jsonOutput"></pre>
+  </section>
+
+  <script>
+    let student = {};
+    let questions = [
+      {q: "Which planet is known as the Red Planet?", options: ["Earth","Mars","Jupiter","Saturn"], ans: "Mars"},
+      {q: "Who is the father of Computers?", options: ["Charles Babbage","Newton","Einstein","Turing"], ans: "Charles Babbage"},
+      {q: "What is 5 + 7?", options: ["10","11","12","13"], ans: "12"},
+      {q: "Which gas do plants inhale?", options: ["Oxygen","Nitrogen","Carbon Dioxide","Hydrogen"], ans: "Carbon Dioxide"},
+      {q: "Which is the largest ocean?", options: ["Atlantic","Indian","Pacific","Arctic"], ans: "Pacific"}
+    ];
+    let selectedQuestions = [];
+
+    // Show Section
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    // Registration
+    function register() {
+      try {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let age = parseInt(document.getElementById("age").value);
+
+        if (!name || !email || !age) throw "All fields are required!";
+        if (age < 12) throw "Age must be 12 or above.";
+
+        student = { name, email, age };
+        document.getElementById("regOutput").innerText = "✅ Registration successful!";
+        generateQuiz();
+        setTimeout(() => showSection("quiz"), 1000);
+
+      } catch (err) {
+        document.getElementById("regOutput").innerText = "Error: " + err;
+      }
+    }
+
+    // Generate 3 random questions
+    function generateQuiz() {
+      selectedQuestions = questions.sort(() => 0.5 - Math.random()).slice(0,3);
+      let quizForm = document.getElementById("quizForm");
+      quizForm.innerHTML = "";
+      selectedQuestions.forEach((q,i) => {
+        let html = `<p><b>Q${i+1}: ${q.q}</b></p>`;
+        q.options.forEach(opt => {
+          html += `<label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label><br>`;
+        });
+        quizForm.innerHTML += html + "<br>";
+      });
+    }
+
+    // Submit Quiz
+    function submitQuiz() {
+      document.getElementById("quizOutput").innerText = "⏳ Calculating result...";
+      let answers = [];
+      selectedQuestions.forEach((q,i) => {
+        let ans = document.querySelector(`input[name="q${i}"]:checked`);
+        answers.push(ans ? ans.value : null);
+      });
+
+      // Simulate server delay with Promise
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let score = 0;
+          for (let i=0;i<selectedQuestions.length;i++) {
+            if (answers[i] === selectedQuestions[i].ans) score++;
+          }
+          resolve(score);
+        }, 2000);
+      }).then(score => {
+        let percentage = (score / selectedQuestions.length) * 100;
+        let grade;
+        if (percentage >= 80) grade = "A";
+        else if (percentage >= 60) grade = "B";
+        else if (percentage >= 40) grade = "C";
+        else grade = "D";
+
+        let timestamp = new Date().toLocaleString();
+
+        let result = {
+          ...student,
+          score,
+          percentage,
+          grade,
+          timestamp
+        };
+
+        document.getElementById("quizOutput").innerText = "";
+        document.getElementById("resultOutput").innerHTML = `
+          ✅ Score: ${score}/${selectedQuestions.length}<br>
+          📊 Percentage: ${percentage.toFixed(2)}%<br>
+          🎯 Grade: ${grade}<br>
+          🕒 Time: ${timestamp}
+        `;
+        document.getElementById("jsonOutput").innerText = JSON.stringify(result, null, 2);
+        showSection("result");
+      });
+    }
+  </script>
+</body>
+</html>

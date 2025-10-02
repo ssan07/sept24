@@ -294,7 +294,7 @@ fruits.unshift("orange");
 console.log(fruits);
 fruits.splice(2,0,"orange","pear");
 console.log(fruits);
-//it adds 2 elements removes 0 elements and the 2 elements anre written in it
+//it adds 2 elements removes 0 elements and the 2 elements are written in it
 console.log(fruits.slice(1,3));
 //slice from where to where ie in arr=[a,b,c,d,e] it gives [b,c]
 fruits=fruits.concat(["chiku","watermelon"]);

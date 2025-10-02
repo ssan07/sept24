@@ -532,11 +532,11 @@ for(var i=0;i<fruits.length;i++){
 }
 // console.log(fruits.tostring());
 console.log(fruits.join (" * "));
-fruits.pop();
-console.log(fruits);
-fruits.push("orange");
-console.log(fruits);
-fruits.shift();
-console.log(fruits);
-fruits.unshift("orange");
-console.log(fruits);
+// fruits.pop();
+// console.log(fruits);
+// fruits.push("orange");
+// console.log(fruits);
+// fruits.shift();
+// console.log(fruits);
+// fruits.unshift("orange");
+// console.log(fruits);

@@ -1,0 +1,77 @@
+.e{
+    padding: 20px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+body{
+ background-image: url(a.jpg);
+ background-repeat: repeat;
+}
+.body{
+    outline: 2px solid rgba(250, 219, 46, 0.589);
+    border-radius: 20px;
+    border:2px solid black;
+    padding:20px;
+    padding-top: 30px;
+    height: auto;
+    width: 450px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+   
+    background-color:rgba(255, 231, 196, 0.068)
+}
+.h{
+    display: flex;
+    font-size: 40px;
+    color: rgb(117, 100, 1);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#enter{
+    background-color: rgb(173, 238, 250);
+}
+#enter:hover{
+    background-color: rgb(0, 217, 255);
+}
+#enter:active{
+    background-color: rgb(0, 150, 255);
+}
+.keys{
+    font-size: 20px;
+    height: 65px;
+    width: 95px;
+    border:2px solid goldenrod;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease;
+}
+input {
+    height: 50px;
+    width: 400px;
+    border-radius: 50px;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.726);
+    color: #FFA500;
+    border: 2px solid goldenrod; 
+    text-align: right;
+}
+
+.keys:hover {
+    background-color: rgba(245, 222, 179, 0.767);
+}
+.keys:active{
+    background-color: rgb(255, 194, 82);
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td,tr{
+    padding: 2px;
+}
