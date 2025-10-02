@@ -23,7 +23,7 @@ function reg() {
         l = { name, email, age };
         // quiz();
         setTimeout(() => document.getElementById("exp").innerText = "loading ...", 500);
-        setTimeout(() => displ(all()), 5000);
+        setTimeout(() => displ(all()), 3000);
 
         // var l={'namez':name,'emailz':email,'agez':age};
         // var store=JSON.stringify(l);
@@ -200,7 +200,7 @@ function loadbutton() {
         document.getElementById("r4").innerText = time;
         document.getElementById("r5").innerText = JSON.stringify(user, null, 2);
         displ("result");
-    }, 5000);
+    }, 3500);
 }
 
 
