@@ -20,9 +20,7 @@ body{
 section{
     display: none;
 }
-.page{
-    display: none;
-}
+
 section.active{
     display: block;
 }

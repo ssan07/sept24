@@ -3,8 +3,10 @@ let next = 0;
 function reg() {
     event.preventDefault();
     try {
-        const namex = document.getElementById('name')
-        const name = namex.value;
+        // const namex = document.getElementById('name')
+        // const name = namex.value;
+
+        const name = document.getElementById('name').value;
         // console.log(name);
         const emailx = document.getElementById('email')
         const email = emailx.value;
@@ -13,6 +15,7 @@ function reg() {
         const age = agex.value;
         // console.log(age);
 
+        // if (name == "" && email == "" && age== "") {
         if (!name || !email || !age) {
             throw ("All fields are required!");
         }
@@ -40,14 +43,14 @@ function displ(id) {
     document.getElementById(id).classList.add("active");
 }
 
-let qb = [
-    { q: "Which planet is known as the Red Planet?", opt: ["Earth", "Mars", "Jupiter", "Saturn"], ans: "Mars" },
-    { q: "Who is the father of Computers?", opt: ["Charles Babbage", "Newton", "Einstein", "Turing"], ans: "Charles Babbage" },
-    { q: "What is 5 + 7?", opt: ["10", "11", "12", "13"], ans: "12" },
-    { q: "Which gas do plants inhale?", opt: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], ans: "Carbon Dioxide" },
-    { q: "Which is the largest ocean?", opt: ["Atlantic", "Indian", "Pacific", "Arctic"], ans: "Pacific" }
-];
-let qbs = [];
+// let qb = [
+//     { q: "Which planet is known as the Red Planet?", opt: ["Earth", "Mars", "Jupiter", "Saturn"], ans: "Mars" },
+//     { q: "Who is the father of Computers?", opt: ["Charles Babbage", "Newton", "Einstein", "Turing"], ans: "Charles Babbage" },
+//     { q: "What is 5 + 7?", opt: ["10", "11", "12", "13"], ans: "12" },
+//     { q: "Which gas do plants inhale?", opt: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], ans: "Carbon Dioxide" },
+//     { q: "Which is the largest ocean?", opt: ["Atlantic", "Indian", "Pacific", "Arctic"], ans: "Pacific" }
+// ];
+// let qbs = [];
 let i = 0;
 let a = null;
 let b = null;
